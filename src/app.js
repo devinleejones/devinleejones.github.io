@@ -1,16 +1,22 @@
-import React from 'react'
-import Button from '@material-ui/core/Button'
+import React, { Fragment } from 'react'
+import WOW from 'wowjs'
+import Header from './header.js'
 
 export default class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {}
   }
+
+  componentDidMount() {
+    const wow = new WOW.WOW({ live: false })
+    wow.init()
+  }
   render() {
     return (
-      <Button variant="contained" color="primary">
-        Hello World
-      </Button>
+      <Fragment>
+        <Header />
+      </Fragment>
     )
   }
 }

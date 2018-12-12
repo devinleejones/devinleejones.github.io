@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react'
 import WOW from 'wowjs'
 import Header from './header.js'
+import Navbar from './navbar.js'
 
 export default class App extends React.Component {
   constructor(props) {
@@ -15,6 +16,7 @@ export default class App extends React.Component {
   render() {
     return (
       <Fragment>
+        <Navbar />
         <Header />
       </Fragment>
     )
